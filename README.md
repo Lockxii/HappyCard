@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HappyCard
 
-## Getting Started
+Landing page marketing pour `HappyCard`, une solution SaaS qui permet aux commerces de creer des cartes de fidelite Apple Wallet et Google Pay avec notifications push.
 
-First, run the development server:
+## Apercu
+
+Le projet contient une landing page complete en `Next.js 15`, avec une direction artistique sombre/orange et un toggle clair/sombre dans la navbar.
+
+Sections incluses :
+
+- Navbar fixe avec menu mobile et toggle de theme
+- Hero avec mockup mobile anime
+- Section demo en 3 etapes
+- Grille de fonctionnalites
+- Preuve sociale
+- Tarifs
+- FAQ
+- CTA final
+- Footer
+
+## Stack
+
+- Next.js 15 App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Composants UI maison / style shadcn
+
+## Lancer le projet
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build de production :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint :
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Arborescence utile
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+  components/
+    navbar.tsx
+    logo.tsx
+    phone-mockup.tsx
+    theme-toggle.tsx
+    bento-card.tsx
+    sections/
+      hero.tsx
+      demo.tsx
+      features.tsx
+      pricing.tsx
+      faq.tsx
+      social-proof.tsx
+      cta.tsx
+      footer.tsx
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- Le mode developpement et le build utilisent des dossiers distincts (`.next-dev` et `.next-build`) pour eviter les conflits.
+- Le theme choisi est persiste dans le navigateur.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
